@@ -1,0 +1,9 @@
+server:
+  port: 8081
+
+okta:
+  oauth2:
+    domain: ${domain}
+    issuer: https://${domain}/
+    client-id: ${clientId}
+    client-secret: ${client-secret}
