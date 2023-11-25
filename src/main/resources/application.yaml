@@ -1,9 +1,15 @@
-server:
-  port: 8081
-
-okta:
-  oauth2:
-    domain: ${domain}
-    issuer: https://${domain}/
-    client-id: ${clientId}
-    client-secret: ${client-secret}
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/userdb
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

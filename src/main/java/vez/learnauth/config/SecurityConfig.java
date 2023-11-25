@@ -9,8 +9,9 @@ import org.springframework.security.web.SecurityFilterChain;
 import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
-@EnableWebSecurity
+// @EnableWebSecurity
 public class SecurityConfig {
+/*
     @Bean
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
         http
@@ -20,4 +21,5 @@ public class SecurityConfig {
                 .oauth2Login( withDefaults() );
         return http.build();
     }
+*/
 }
