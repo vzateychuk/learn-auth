@@ -27,6 +27,7 @@ public class UserEntity implements UserDetails {
 
     @Id @GeneratedValue
     private Integer id;
+    private String fullname;
     private String email;
     private String password;
 
