@@ -17,7 +17,7 @@ import java.util.function.Function;
 @Service
 public class JwtTokenService {
 
-    @Value("${secret.key.hex}")
+    @Value("${secret.key}")
     private String secretKey;
 
     public String extractUsername(String jwtToken) {
@@ -60,7 +60,7 @@ public class JwtTokenService {
         return Jwts.parserBuilder()
                 .setSigningKey( getSignIngKey() )
                 .build()
-                .parseClaimsJwt(jwtToken)
+                .parseClaimsJws(jwtToken)
                 .getBody();
     }
 
